@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+      <!-- question 01 -->
+      <script>
+        //document.write("Original digits : 32243");
+
+        function reversedNum(num) {
+            return (
+                parseFloat(
+                    num
+                        .toString()
+                        .split('')
+                        .reverse()
+                        .join('')
+                ) * Math.sign(num)
+            )
+        }
+        var rslt = reversedNum(32243);
+        //document.write("<br>After reversing : " + rslt);
+    </script>
+
+    <!-- Question 02 -->
+    <script>
+        function validatePalin(str) {
+
+            // get the total length of the words
+            const len = string.length;
+
+            // Use for loop to divide the words into 2 half
+            for (let i = 0; i < len / 2; i++) {
+
+                // validate the first and last characters are same
+                if (string[i] !== string[len - 1 - i]) {
+                    alert('It is not a palindrome');
+                }
+            }
+            alert('It is a palindrome');
+        }
+
+        // accept the string or number from the prompt
+        const string = prompt('Enter a string or number: ');
+        const value = validatePalin(string);
+        console.log(value);  
+    </script>
+
+    <!-- Question 03 -->
+    <script>
+        let possibleCombinations = (str) => {
+            let combinations = [];
+            for (let i = 0; i < str.length; i++) {
+
+                for (let j = i + 1; j < str.length + 1; j++) {
+
+                    combinations.push(str.slice(i, j));
+                }
+            }
+            return combinations;
+        }
+        document.write(possibleCombinations('Dog'));
+    </script>
+
+
+    <!-- Question 04 -->
+    <script>
+        function alpha(str) {
+            var arr = str.split(""); // splits the string
+            res = arr.sort().join(""); // sort the array and joins to form a string
+            return res; // returns the result
+        }
+        document.write("sohail <br>");
+        document.write(alpha("sohail"));
+    </script>
+
+    <!-- question 05 -->
+    <script>
+        const mySentence = "I am sohail Riaz and I am a student at bbsul and SMIT.";
+        const words = mySentence.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+
+        words.join(" ");
+    </script>      
+
+    <!-- QUestion 06 -->
+    <script>
+        function findLongestWord(str) {
+            var strSplit = str.split(' ');
+            var longestWord = 0;
+            for (var i = 0; i < strSplit.length; i++) {
+                if (strSplit[i].length > longestWord) {
+                    longestWord = strSplit[i].length;
+                }
+            }
+            return longestWord;
+        }
+        var inputString = prompt("Enter some words");
+        var result = findLongestWord(inputString);
+        document.write(result);
+    </script>
+     <!-- Question 07 -->
+    <script>
+    function vowel_count(str1)
+{
+  var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
+  
+  for(var x = 0; x < str1.length ; x++)
+  {
+    if (vowel_list.indexOf(str1[x]) !== -1)
+    {
+      vcount += 1;
+    }
+  
+  }
+  return vcount;
+}
+console.log(vowel_count("I Am Sohail Riaz"));
+</script>      
+    </script>
+</body>
+</html>
